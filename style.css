@@ -1,0 +1,238 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	bottom: 0;
+	font-family: 'Open Sans', sans-serif;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background-color: #eaeaea;
+}
+
+.phone-mockup {
+	width: 360px;
+	height: 740px;
+	border-radius: 40px;
+	border: 8px solid black;
+	background-color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+	position: relative;
+	padding: 40px 10px 20px;
+}
+
+.phone-mockup::before {
+	content: '';
+	width: 50px;
+	height: 4px;
+	background: black;
+	position: absolute;
+	top: 10px;
+	border-radius: 10px;
+}
+
+.container {
+	width: 100%;
+	height: 100%;
+	overflow-y: auto;
+	scrollbar-width: none;
+}
+
+.top-section {
+	display: flex;
+	justify-content: space-between;
+}
+.settings,
+.notifications {
+	font-size: 20px;
+	cursor: pointer;
+	transition: 0.3s;
+}
+.settings:hover,
+.notifications:hover {
+	color: #6244f8;
+}
+.user-section {
+	padding: 20px 0;
+}
+.category {
+	display: flex;
+	align-items: start;
+	gap: 25px;
+	transition: 0.3s;
+}
+.category p {
+	font-size: 16px;
+	font-weight: bold;
+	transition: 0.3s;
+	cursor: pointer;
+}
+.category p:hover {
+	color: #6244f8;
+}
+
+.card-box {
+	margin-top: 30px;
+}
+.card-box .card-front {
+	padding: 20px;
+	width: 100%;
+	border-radius: 8px;
+	background-size: cover;
+	background-image: url('./img/bg-card-front.png');
+	color: #f5f1f1;
+}
+
+.card-info {
+	display: flex;
+	flex-direction: column;
+}
+
+.card-saldo {
+	margin-top: 20px;
+	font-size: 14px;
+	letter-spacing: 2px;
+}
+.card-saldo {
+	margin-top: 20px;
+	font-size: 36px;
+	letter-spacing: 2px;
+}
+.card-saldo span {
+	font-size: 22px;
+}
+.card-name {
+	display: flex;
+	justify-content: space-between;
+}
+.card-buttons {
+	display: flex;
+	gap: 10px;
+	margin-top: 30px;
+}
+
+.card-buttons button {
+	border: none;
+	border-radius: 8px;
+	font-weight: bold;
+	color: #6244f8;
+	height: 40px;
+	cursor: pointer;
+	transition: 0.3s;
+}
+.card-buttons .blik img {
+	height: 40px;
+	cursor: pointer;
+}
+.card-buttons button:hover {
+	background-color: #6244f8;
+	color: #f5f1f1;
+}
+.bankAnnouncement {
+	display: flex;
+	gap: 15px;
+	margin-top: 30px;
+}
+.bankAnnouncement .text p {
+	font-size: 14px;
+}
+.bankAnnouncement .text .title {
+	font-size: 16px;
+	font-weight: bold;
+	margin-bottom: 15px;
+	color: black;
+}
+
+.bankAnnouncement .img {
+	width: 120px;
+	height: 120px;
+	background-image: url('./img/office-620822_1280.jpg');
+	background-size: cover;
+	background-position: center;
+	border-radius: 8px;
+}
+
+.shortcuts-info,
+.operation-info {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 30px;
+}
+.shortcuts-info .title,
+.operation-info .title {
+	font-size: 16px;
+	font-weight: bold;
+	color: black;
+}
+.shortcuts-info .text,
+.operation-info .text {
+	font-size: 14px;
+	font-weight: bold;
+	color: #6244f8;
+	cursor: pointer;
+}
+
+.shortcuts-box {
+	display: flex;
+	gap: 10px;
+}
+.shortcuts-item {
+	display: flex;
+	flex-direction: column;
+	padding: 20px 15px 15px 20px;
+	width: 100%;
+	text-wrap: nowrap;
+	align-items: start;
+	border-radius: 8px;
+	background-color: #f3f1f1;
+}
+.shortcuts-item .title {
+	margin-top: 8px;
+	font-weight: bold;
+	font-size: 14px;
+	color: black;
+}
+.shortcuts-item .text {
+	font-size: 12px;
+	font-weight: 600;
+	color: #6244f8;
+	cursor: pointer;
+}
+.shortcuts-item img {
+	width: 30px;
+	filter: brightness(0) saturate(100%) invert(26%) sepia(86%) saturate(747%) hue-rotate(220deg);
+}
+.bottom-section {
+	display: flex;
+	justify-content: space-between;
+	text-align: center;
+	margin-top: 30px;
+}
+.bottom-section img {
+	width: 20px;
+}
+.bottom-section p {
+	font-size: 14px;
+}
+.bottom-section .pulpit,
+.bottom-section .transfer,
+.bottom-section .wallet,
+.bottom-section .finance,
+.bottom-section .purchase {
+	transition: filter 0.3s;
+	cursor: pointer;
+}
+.bottom-section .pulpit:hover,
+.bottom-section .transfer:hover,
+.bottom-section .wallet:hover,
+.bottom-section .finance:hover,
+.bottom-section .purchase:hover {
+	filter: brightness(0) saturate(100%) invert(26%) sepia(86%) saturate(747%) hue-rotate(220deg);
+}
