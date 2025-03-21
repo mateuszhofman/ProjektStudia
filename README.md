@@ -1,6 +1,7 @@
 # Progressive Project
 # Description
 A brief description of the project.
+# Live: https://mateuszhofman.github.io/ProjektStudia/
 # Installation
 1. Clone the repository:
 ```sh
