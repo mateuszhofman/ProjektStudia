@@ -236,3 +236,47 @@ body {
 .bottom-section .purchase:hover {
 	filter: brightness(0) saturate(100%) invert(26%) sepia(86%) saturate(747%) hue-rotate(220deg);
 }
+
+.modal {
+	display: none;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 80%;
+	padding: 20px;
+	border-radius: 10px;
+	text-align: center;
+	color: #fff;
+}
+
+.modal-content {
+	position: relative;
+	background-color: #333;
+	padding: 20px;
+	border-radius: 10px;
+}
+
+#blikCode {
+	font-size: 30px;
+	font-weight: bold;
+	color: #f5f1f1;
+}
+
+.close {
+	position: absolute;
+	top: 0;
+	right: 15px;
+	font-size: 30px;
+	font-weight: bold;
+	color: #fff;
+	cursor: pointer;
+	transition: 0.3s;
+}
+.close i {
+	font-size: 20px;
+}
+
+.close:hover {
+	color: #6244f8;
+}
