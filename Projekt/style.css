@@ -36,6 +36,7 @@ body {
 	position: absolute;
 	top: 10px;
 	border-radius: 10px;
+	z-index: 1100;
 }
 
 .container {
@@ -214,10 +215,14 @@ body {
 	filter: brightness(0) saturate(100%) invert(26%) sepia(86%) saturate(747%) hue-rotate(220deg);
 }
 .bottom-section {
+	position: sticky;
+	bottom: -10px;
 	display: flex;
 	justify-content: space-between;
 	text-align: center;
-	margin-top: 30px;
+	padding: 8px 0;
+	background-color: #fff;
+	z-index: 1100;
 }
 .bottom-section img {
 	width: 20px;
@@ -243,49 +248,72 @@ body {
 
 /* BLIK */
 
-.modal {
-	display: none;
+.full-screen-modal {
 	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	width: 80%;
-	padding: 20px;
-	border-radius: 10px;
-	text-align: center;
-	color: #fff;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.7);
+	z-index: 2000;
+	display: none;
+	justify-content: center;
+	align-items: center;
 }
 
-.modal-content {
-	position: relative;
-	background-color: #333;
-	padding: 20px;
-	border-radius: 10px;
+.full-screen-modal .modal-content {
+	width: 90%;
+	max-width: 20rem;
+	background-color: white;
+	color: black;
+	padding: 2rem 1rem;
+	border-radius: 1rem;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
 }
 
 #blikCode {
-	font-size: 30px;
+	font-size: 2rem;
 	font-weight: bold;
-	color: #f5f1f1;
-}
-
-.close {
-	position: absolute;
-	top: 0;
-	right: 15px;
-	font-size: 30px;
-	font-weight: bold;
-	color: #fff;
-	cursor: pointer;
-	transition: 0.3s;
-}
-.close i {
-	font-size: 20px;
-}
-
-.close:hover {
 	color: #6244f8;
 }
+
+.blik-actions {
+	display: flex;
+	flex-direction: column;
+	gap: 0.75rem;
+}
+
+.blik-actions button {
+	padding: 0.75rem;
+	font-size: 1rem;
+	font-weight: bold;
+	border: none;
+	border-radius: 0.5rem;
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+
+#copyBlik {
+	background-color: #6244f8;
+	color: white;
+}
+
+#copyBlik:hover {
+	background-color: #4c33c4;
+}
+
+#cancelBlik {
+	background-color: #e0e0e0;
+	color: black;
+}
+
+#cancelBlik:hover {
+	background-color: #cacaca;
+}
+
 
 /* Okno Logowania */
 
@@ -336,4 +364,28 @@ body {
 	text-decoration: none;
 	color: black;
 	font-weight: bold;
+}
+
+/* Płatności */
+.payment-screen {
+	padding-top: 2em;
+}
+
+.payment-screen .tile {
+	background-color: white;
+	border-radius: 1rem;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+	text-align: center;
+	padding: 1.5rem 1rem;
+	transition: all 0.2s;
+	cursor: pointer;
+}
+.payment-screen .tile:hover {
+	transform: scale(1.03);
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+.payment-screen .tile-icon {
+	font-size: 1.8rem;
+	color: #6244f8;
+	margin-bottom: 0.5rem;
 }

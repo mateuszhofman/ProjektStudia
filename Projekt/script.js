@@ -1,8 +1,8 @@
 const blikButton = document.querySelector('.blik')
 const blikModal = document.getElementById('blikModal')
 const blikCodeElement = document.getElementById('blikCode')
-const closeButton = document.querySelector('.close')
-
+const copyButton = document.getElementById('copyBlik')
+const cancelButton = document.getElementById('cancelBlik')
 
 function generateBlikCode() {
 	return Math.floor(100000 + Math.random() * 900000)
@@ -11,10 +11,16 @@ function generateBlikCode() {
 blikButton.addEventListener('click', function () {
 	const blikCode = generateBlikCode()
 	blikCodeElement.textContent = blikCode
-	blikModal.style.display = 'block'
+	blikModal.style.display = 'flex'
 })
 
-closeButton.addEventListener('click', function () {
+copyButton.addEventListener('click', function () {
+	navigator.clipboard.writeText(blikCodeElement.textContent).then(() => {
+		alert('Kod BLIK skopiowany!')
+	})
+})
+
+cancelButton.addEventListener('click', function () {
 	blikModal.style.display = 'none'
 })
 
@@ -23,3 +29,30 @@ window.addEventListener('click', function (event) {
 		blikModal.style.display = 'none'
 	}
 })
+
+
+// Pulpit/Płatności
+function openPaymentScreen() {
+	document.getElementById('paymentScreen').classList.remove('d-none')
+}
+
+function closePaymentScreen() {
+	document.getElementById('paymentScreen').classList.add('d-none')
+}
+
+function showDashboard() {
+	document.getElementById('paymentScreen').classList.add('d-none')
+}
+document.addEventListener('DOMContentLoaded', function () {
+	const transferButton = document.querySelector('.bottom-section .transfer')
+	if (transferButton) {
+		transferButton.addEventListener('click', openPaymentScreen)
+	}
+
+	const pulpitButton = document.querySelector('.bottom-section .pulpit')
+	if (pulpitButton) {
+		pulpitButton.addEventListener('click', showDashboard)
+	}
+})
+
+
